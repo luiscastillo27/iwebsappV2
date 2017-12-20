@@ -1,0 +1,769 @@
+*
+	margin 0px
+	padding 0px
+	box-sizing border-box
+	font-size 16px
+	font-family 'Gabriela', helvetica
+	
+/************************************************
+	MOVIL
+*************************************************/
+body
+	overflow-x hidden
+body::-webkit-scrollbar 
+	width 7px 
+	background rgb(250,250,250)
+.espacio-nosotros
+	display block
+	width 100%;
+	padding 10px
+body::-webkit-scrollbar-thumb 
+	background rgba(65, 121, 247, 1)
+	border-radius 10px
+	border solid 1px #FAFAFA
+.fa-bars,
+.fa-close
+	color #000
+button {
+	position: relative;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background: #89669b;
+	color: #fff;
+	padding: 18px 60px;
+	border-radius: 2px;
+	font-size: 22px;
+}
+
+.material {
+	position: relative;
+	color: #fff;
+	margin: 20px auto;
+	height: 400px;
+	width: 500px;
+	background: #f45673;
+}
+
+.ripple {
+	overflow: hidden;
+}
+
+.ripple-effect {
+	position: absolute;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	background: #fff;
+	animation: animacion-ripple 2s;
+}
+
+@keyframes animacion-ripple {
+	from {
+		opacity: 0.4;
+
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		-o-transform: scale(1);
+		transform: scale(1);
+	}
+
+	to {
+		opacity: 0;
+		
+		-webkit-transform: scale(100);
+		-ms-transform: scale(100);
+		-o-transform: scale(100);
+		transform: scale(100);
+	}
+}	
+/* INICIO MENU */
+.contenedor
+	/* INICIO CONTENIDO PRINCIPAL */
+	.contenido-principal
+		display block
+		margin-top 60px
+		width 100%
+	/* FIN CONTENIDO PRINCIPAL */
+	/* INICIO REDES SOCIALES */
+	.redes-sociales
+		z-index 2700
+		position fixed
+		bottom 10px
+		right 10px
+		cursor pointer
+		.fila
+			position absolute
+			display flex
+			justify-content flex-end
+			transition all 300ms
+			opacity 0
+			padding 5px
+			text-decoration none
+			label
+				font-size 40px
+			.fa-facebook-square
+				color #3D4BA3
+				text-shadow 0px 0px 1px #000
+			.fa-twitter-square
+				color #00A9E6
+				text-shadow 0px 0px 1px #000
+			.fa-google-plus-square
+				color #D00000
+				text-shadow 0px 0px 1px #000
+			.fa-pinterest-square
+				color #EC2C15
+				text-shadow 0px 0px 1px #000
+			.fa-plus-circle
+				color #4179F7
+				text-shadow 0px 0px 1px #000
+			h4
+				transform: translate(-10px, 7px)
+				background rgba(0,0,0,0.6)
+				height 15px
+				font-size 10px
+				font-weight 300;
+				padding 5px 5px 20px 5px
+				color #fff
+				border-radius 2px
+		.icono1
+			transform translate(-100px, -40px)
+			h4
+				width 57px
+		.icono2
+			transform translate(-20px, -90px)
+			h4
+				width 45px
+		.icono3
+			transform translate(-120px, -140px)
+			h4
+				width 67px
+		.icono4 
+			transform translate(-30px, -200px)
+		.efecto-icono1
+			transform translate(-50px, -50px) 
+		.efecto-icono2
+			transform translate(-38px, -95px)
+		.efecto-icono3
+			transform translate(-60px, -140px)
+		.efecto-icono4 
+			transform translate(-47px, -190px)
+		.iconoplus
+			font-size 70px
+			cursor pointer
+			color #4179F7
+			transition all 300ms
+			text-shadow 0px 0px 1px #000
+		.efecto-iconoplus
+			transform rotate(180deg)
+	/* FIN REDES SOCIALES */
+	/* INICIO CONTENEDOR MODAL */	
+	.contenedor-modal
+		width 100%
+		z-index 7000
+		height 100%
+		position fixed
+		opacity 0	
+		display flex
+		left -100%
+		transform rotate(-90deg)
+		align-items center
+		justify-content center
+		transition all 0.5s ease-out
+		&.active
+			left 0
+			transform rotate(0deg)
+			opacity 1
+	/* FIN CONTENEDOR MODAL */
+	/* INICIO HEADER */
+	header 
+		background #FAFAFA
+		display block
+		width 100%
+		height 60px
+		margin-button 100px
+		position fixed
+		top 0px
+		z-index 127000000000000
+		.logo
+			display block
+			width 60px
+			height 60px
+			padding 5px
+			position absolute 
+			left 0px 
+			top 0px
+			img 
+				width 100%
+				height 100%
+		.contenedor-menu
+			.fa-bars
+				font-size 27px
+				position absolute
+				top 0px
+				right 0px
+				width 60px
+				height 60px
+				text-align center
+				line-height 2.3
+				cursor pointer
+			nav
+				display block
+				background #FAFAFA
+				margin-top 60px
+				position fixed
+				right 0px
+				width 50%
+				height 90.4vh
+				border-top solid 1px #000
+				z-index 1150
+				right -55%
+				transition: all 0.5s ease;
+				a 
+					display block
+					padding 20px
+					text-decoration none
+					text-align left
+					color #4179F7
+					border-bottom solid 1px #000
+			.abrirmenu
+				right 0px
+		.submenu
+			display block
+			margin-top 60px
+			background #FAFAFA
+			position fixed
+			right 0px
+			width 55%
+			z-index 127000000000000
+			height 90.4vh
+			border-top solid 1px #000
+			right -55%
+			transition: all 0.5s ease;
+			a 
+				display block
+				padding 20px
+				text-decoration none
+				text-align left
+				color #4179F7
+				border-bottom solid 1px #000
+			.btn-atras
+				background #4179F7
+				color #fff
+		.abrirsub
+			right -5%
+	/* FIN HEADER */
+	/* INICIO BANER */
+	.portada1
+		background url('../img/portada1.jpg')
+	.portada2
+		background url('../img/portada2.jpg')
+	.portada3
+		background url('../img/portada3.jpg')
+	.banner-principal
+		display block
+		width 100%
+		min-height 227px
+		position relative
+		margin-top 60px
+		background-size cover
+		animation movimiento 15s infinite linear alternate
+		.degradado
+			width 100%
+			height 100%
+			position absolute
+			z-index 100
+			opacity 0.5
+			background linear-gradient(top, #FAFAFA, #4179F7)
+		.banner-detalles
+			width 100%
+			padding-top 20px
+			position relative
+			z-index 101
+			color #fff
+			h1,
+			h2,
+			p
+				color #fff
+				padding-top 5px
+				font-size 15px
+				text-align center
+			h1,
+			h2
+				font-size 20px
+			a 
+				text-decoration none
+				display block
+				text-align center
+				padding 10px
+				margin 10px
+				color #fff
+		@keyframes movimiento {
+		    from {
+		        background-position: bottom left;
+		    }to {
+		        background-position: top right;
+		    }
+		}
+	/* FIN BANNER */
+
+	/* INICIO FORMULARIO CENTRADO*/
+	.form-center
+		display block
+		position relative
+		width 200px
+		margin 0px auto
+		input,
+		textarea
+			display block
+			width 100%
+			padding 10px
+			border none
+			border-left solid 1px #757575
+			border-right solid 1px #757575
+			border-bottom solid 1px #757575
+			outline none
+		button
+			display block
+			background #4179F7
+			position relative
+			font-size 16px
+			margin-top 20px
+			width 100%
+			border-radius 10px
+		.radi-top
+			border-radius 10px 10px 0px 0px
+			border-top solid 1px #757575
+		.radi-bottom
+			border-radius 0px 0px 10px 10px
+		textarea
+			height 150px
+		.espacio
+			display block
+			width 100%
+			height 20px
+			padding 5px
+	/* FIN FORMULARIO CENTRADO*/
+	/* INICIO TABS */
+	.contenedor-tabs
+		width 90%
+		margin 0px auto
+		.tabs
+			width 100%
+			background #363636
+			list-style none
+			display flex
+			border-radius 10px 10px 0px 0px
+			li
+				width 18%
+				a
+					color #fff
+					text-decoration none
+					font-size 16px
+					text-align center
+					display block
+					padding 20px 0px
+				.tab-text
+					display none
+		.active
+			background #4179F7
+		.secciones
+			border-radius 0px 0px 10px 10px
+			width 100%
+			background #FAFAFA
+			color #000
+			article
+				padding 0px 30px 30px 30px
+				img 
+					display block
+					width 55%
+					min-width 27px
+					float left
+					margin-top 30px
+					margin-right 10px
+					border-radius 10px
+				p
+					text-align justify
+					color #363636
+					padding-top 30px
+	/* FIN TABS*/
+	/* INICIO PORTAFOLIO */
+	.espacio-portafolio
+		display block
+		width 100%
+		padding 10px
+	.contenedor-portafolio
+		display table
+		height auto
+		width 100%
+		.cartas
+			width 90%
+			height 350px
+			display block
+			margin 20px auto
+			perspective 700
+			.carta
+				width 100%
+				height 100%
+				position relative
+				transition all 1s
+				transform-style preserve-3d
+				.lado
+					width 100%
+					height 100%
+					backface-visibility hidden
+					position absolute
+					border-radius 10px
+					&.enfrente
+						background #FAFAFA
+						.carta-bander
+							display block
+							width 100%
+							height 100px
+							position relative
+							img 
+								display block
+								width 100%
+								height 100%
+								border-radius 10px 10px 0px 0px
+						.carta-author
+							display block
+							width 70px
+							height 70px
+							position absolute
+							margin-top -35px
+							margin-left 37%
+							img 
+								display block
+								width 100%
+								height 100%
+								border-radius 100%
+								border solid 5px #FAFAFA
+						.carta-body
+							position relative
+							margin-top 35px
+							h2,
+							p 
+								color #000
+								display block
+								width 100%
+								padding 5px
+								margin-button 200px !important
+								font-size 18px !important
+							p 
+								font-size 15px !important
+						.carta-footer
+							display block
+							padding 10px
+							position absolute
+							bottom 0px
+							width 100%
+							background #FAFAFA
+							border-radius 0px 0px 10px 10px
+							border-top solid 1px #757575
+					&.atras				
+						background #FAFAFA        
+						transform rotateY(180deg)
+						.carta-body
+							position relative 
+							border-radius 10px 10px 0px 0px
+							h2,
+							p
+								color #000
+								display block
+								width 100%
+								padding 5px
+								font-size 18px !important
+							p
+								font-size 15px !important
+						.carta-estado
+							margin-top 17px
+							margin-bottom 10px !important
+							.stats
+								display block
+								float left
+								height 55px
+								width 33.333333%
+								text-align center
+								h4 
+									font-weight 300
+									font-size 14px !important
+									margin-bottom 5px
+									color #000 !important
+								p 
+									color #777777
+									font-size 12px !important
+								&:first-child
+									border-right 1px solid #777777
+								&:last-child
+									border-left 1px solid #777777
+						.carta-footer
+							position absolute
+							clear both !important
+							float none !important
+							display block
+							width 100%
+							bottom 0px
+							a 
+								display block
+								font-size 15px !important
+								background #4179F7
+								border-radius 10px !important
+				&:hover
+					transform rotateY(180deg)
+	/* FIN PORTAFOLIO */
+	/* INICIO FOOTER */
+	footer
+		display block
+		clear both
+		float none
+		width 100%
+		background #FAFAFA
+		color: #000
+		.footer-body
+			padding 27px 0px 0px 0px
+			display block
+			width 100%
+			margin 0px auto
+			.colum
+				display table
+				float left
+				width 100%
+				margin 0px 0px 20px 0px
+				h3 
+					font-size 16px
+					margin 0px 0px 10px 15px
+				a 
+					display block
+					padding 10px
+					color #000
+					font-weight bold
+					text-decoration none
+					i 
+						font-size 20px
+						width 37px
+						padding 0px 0px 0px 5px
+				p 
+					padding 0px 15px 15px 15px
+					text-align left
+			
+				&.socal
+					.fa-facebook
+						color #3D4BA3
+					.fa-twitter
+						color #00A9E6
+					.fa-google-plus
+						color #D00000
+					.fa-pinterest-p
+						color #EC2C15
+				&.contacto
+					.fa-phone 
+						color #00D43B
+					.fa-envelope-o 
+						color #00AAE5
+			.footer-pie
+				clear both
+				padding 20px
+				p,a
+					font-size 11px
+					color #000
+					line-height 2
+					text-decoration none
+				.copyright,
+				.politicas
+					text-align center
+				a 
+					color #000
+					font-weight bold
+					&:hover
+						color #5E73FD
+/* FIN FOOTER */
+
+
+/************************************************
+	TABLET
+*************************************************/
+@media screen and (min-width:700px)
+	
+	.espacio-nosotros
+		padding 40px !important
+	/* INICIO BANER */
+	.banner-principal
+		min-height 300px !important
+		.banner-detalles
+			width 500px !important
+			margin 0px auto !important
+			padding-top 80px !important
+	/* FIN BANNER */
+	/* INICIO FORMULARIO CENTRADO*/
+	.form-center
+		width 400px !important
+		.espacio
+			height 65px !important
+	/* FIN FORMULARIO CENTRADO*/
+	/* INICIO TABS */
+	.contenedor-tabs
+		width 500px !important
+	/* FIN TABS*/
+	/* INICIO PORTAFOLIO */
+	.espacio-portafolio
+		padding 40px !important
+	.contenedor-portafolio
+		.cartas
+			width 225px !important
+			height 300px !important
+			float left
+			margin 12.5px !important
+			perspective 700
+	/* FIN PORTAFOLIO */
+	/* INICIO FOOTER */	
+	footer
+		.footer-body
+			width 700px !important
+			.colum
+				width 300px
+				h3 
+					font-size 18px
+					i 
+						font-size 20px
+						width 37px
+				p 
+					text-align justify
+				&.info
+					width 700px
+				&.socal
+					width 365px
+				&.contacto
+					width 320px
+			.footer-pie
+				.copyright
+					width 280px
+					float left
+				.politicas
+					width 655px
+					text-align right
+	/* FIN FOOTER */
+		
+/************************************************
+	ESCRITORIO
+*************************************************/
+@media screen and (min-width:1000px)
+	
+	.espacio-nosotros
+		padding 65px !important
+	/* INICIO HEADER */
+	header 
+		.contenedor-menu
+			.fa-bars
+				display none
+			nav
+				margin-top 0px !important
+				width 543px !important
+				height 60px !important
+				border none !important
+				right 0px !important
+				z-index 1270 !important
+				margin-left -45px !important
+				a 
+					display block !important
+					color #4179F7
+					float left
+					border none !important
+					&:hover
+						background #4179F7
+						color #fff
+		.submenu
+			display block !important
+			right 330px !important
+			height 100px !important
+			width 200px !important
+			position absolute
+			background none !important
+			//margin-top -220px !important
+			margin-top 60px !important
+			opacity 1
+			border-radius 5px 5px 0px 0px !important
+			border none !important
+			z-index 1150 !important
+			transform scale(0)
+			transition all 0.5s ease-out
+			a 
+				display block
+				width 100%
+				padding 15px !important
+				background #FAFAFA
+				color #191919
+				border solid 1px #fff !important
+				transition all 0.5s ease
+				&:hover
+					background #4179F7
+					color #fff
+				&:first-child
+					border-radius 5px 5px 0px 0px 
+				&:last-child
+					border-radius 0px 0px 5px 5px
+			&.active
+				opacity 1
+				transform scale(1)
+				//margin-top 60px !important
+			.btn-atras
+				display none !important	
+	/* FIN HEADER */
+	/* INICIO BANER */
+	.banner-principal
+		min-height 400px !important
+		.banner-detalles
+			width 900px !important
+			padding-top 110px !important
+			h2,h1
+				font-size 27px !important
+			p,a
+				font-size 19px !important
+	/* FIN BANNER */
+	/* INICIO FORMULARIO CENTRADO*/
+	.form-center
+		width 300px !important
+		.espacio
+			height 90px !important
+	/* FIN FORMULARIO CENTRADO*/
+	/* INICIO TABS */
+	.contenedor-tabs
+		width 700px !important
+		.secciones
+			img 
+				width 400px !important
+	/* FIN TABS*/
+	/* INICIO PORTAFOLIO */
+	.espacio-portafolio
+		padding 60px !important
+	.contenedor-portafolio
+		.cartas
+			width 200px !important
+			height 300px !important
+			float left
+			margin 12.5px !important
+			perspective 700
+			.carta
+				.carta-author
+					margin-left 65px !important
+	/* FIN PORTAFOLIO */
+	/* INICIO FOOTER */
+	footer
+		.footer-body
+			width 1000px !important
+			.colum
+				&.info
+					width 435px
+				&.socal
+					width 250px
+				&.contacto
+					width 270px
+			.footer-pie
+				.copyright
+					width 280px
+				.politicas
+					width 950px
+	/* FIN FOOTER */
+		
+
+
