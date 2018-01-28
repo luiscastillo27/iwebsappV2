@@ -10,6 +10,9 @@
 *************************************************/
 body
 	overflow-x hidden
+.nivo-controlNav
+	opacity 0
+	display none
 body::-webkit-scrollbar 
 	width 7px 
 	background rgb(250,250,250)
@@ -31,11 +34,9 @@ button {
 	cursor: pointer;
 	background: #89669b;
 	color: #fff;
-	padding: 18px 60px;
-	border-radius: 2px;
-	font-size: 22px;
+	padding: 12px;
+	border-radius: 5px;
 }
-
 .material {
 	position: relative;
 	color: #fff;
@@ -44,11 +45,12 @@ button {
 	width: 500px;
 	background: #f45673;
 }
-
 .ripple {
 	overflow: hidden;
 }
-
+.ripple-active{
+	background: #000 !important;
+}
 .ripple-effect {
 	position: absolute;
 	border-radius: 50%;
@@ -306,7 +308,139 @@ button {
 		    }
 		}
 	/* FIN BANNER */
-
+	/* INICIO SERVICIOS*/
+	.servicios-globales
+		width 90%
+		margin auto
+		.servicios-items
+			width 100%
+			text-align left
+			&.img-item
+				padding 0px !important
+				width 100%
+				position relative
+				.img-portada
+					display block
+					width 100%
+					border-radius 35px
+					z-index 127
+					position relative
+				.img-fondo
+					display block
+					position absolute
+					bottom 0px
+					left 0px
+					right 0px
+					top 0px
+					border-radius 70px
+					z-index 126
+					img 
+						height 100%
+						border-radius 70px
+				img 
+					display block
+					width 100%
+					border-radius 35px
+			h2 
+				padding 10px
+			i 
+				width 41px
+				height 41px
+				display block
+				border-radius 100%
+				color #fff
+				text-align center
+				line-height 2.7
+			p 
+				padding 10px
+				float none
+				clear both
+				color #000
+				text-align justify
+			&.derecho,
+			&.izquierdo
+				margin 20px 0px
+				h2 
+					display inline-block
+					float left
+					color #363636
+				i 
+					background #4179F7
+					float left
+	/* FIN SERVICIOS*/
+	/* INICIO CARACTERISTICAS */
+	.servicios-caracteristicas
+		float none
+		clear both
+		width 90%
+		margin 100px auto
+		.servicio-item
+			width 100%
+			text-align left
+			&.img-item
+				padding 0px !important
+				width 100%
+				position relative
+				.img-portada
+					display block
+					width 100%
+					border-radius 35px
+					z-index 127
+					position relative
+				.img-fondo
+					display block
+					position absolute
+					bottom 0px
+					left 0px
+					right 0px
+					top 0px
+					border-radius 70px
+					z-index 126
+					img 
+						height 100%
+						border-radius 70px
+				img 
+					display block
+					width 100%
+					border-radius 35px
+			h2 
+				padding 10px
+			i 
+				width 41px
+				height 41px
+				display block
+				background #4179F7
+				border-radius 100%
+				color #fff
+				text-align center
+				line-height 2.7
+			p 
+				padding 10px
+				float none
+				clear both
+				color #000
+				text-align justify
+			strong
+				display block
+				padding 15px
+				i
+					font-weight bold
+					background none !important
+					color #000
+					margin -10px !important
+					margin-right 5px !important
+					border-radius 0px !important
+			&.derecho,
+			&.izquierdo
+				margin 20px 0px
+				h2 
+					display inline-block
+					float left
+					color #363636
+				i 
+					background #4179F7
+					float left
+	/* FIN CARACTERISTICAS */	
 	/* INICIO FORMULARIO CENTRADO*/
 	.form-center
 		display block
@@ -396,6 +530,18 @@ button {
 		display table
 		height auto
 		width 100%
+		.portafolio-btn
+			display table
+			width 90%
+			margin 0px auto
+			button
+				display block
+				width 48%
+				float left
+				margin-right 2px
+				margin-left 2px
+				margin-top 4px
+				font-size 10px
 		.cartas
 			width 90%
 			height 350px
@@ -458,6 +604,8 @@ button {
 							position absolute
 							bottom 0px
 							width 100%
+							color #000
+							text-align center
 							background #FAFAFA
 							border-radius 0px 0px 10px 10px
 							border-top solid 1px #757575
@@ -609,6 +757,13 @@ button {
 	.espacio-portafolio
 		padding 40px !important
 	.contenedor-portafolio
+		.portafolio-btn
+			width 96% !important
+			button 
+				display block
+				width auto !important
+				font-size 15px !important
+				margin-right 10px !important
 		.cartas
 			width 225px !important
 			height 300px !important
@@ -616,6 +771,23 @@ button {
 			margin 12.5px !important
 			perspective 700
 	/* FIN PORTAFOLIO */
+	/* INICIO SERVICIOS*/
+	.servicios-globales
+		width 600px !important
+		.servicios-items
+			&.img-item
+				padding 0px !important
+				width 40% !important
+				margin 0px auto !important
+	/* FIN SERVICIOS*/
+	/* INICIO CARACTERISTICAS */
+	.servicios-caracteristicas
+		.servicio-item
+			&.img-item
+				padding 0px !important
+				width 40% !important
+				margin 0px auto !important
+	/* FIN CARACTERISTICAS */	
 	/* INICIO FOOTER */	
 	footer
 		.footer-body
@@ -737,6 +909,8 @@ button {
 	.espacio-portafolio
 		padding 60px !important
 	.contenedor-portafolio
+		.portafolio-btn
+			width 98% !important 
 		.cartas
 			width 200px !important
 			height 300px !important
@@ -747,6 +921,108 @@ button {
 				.carta-author
 					margin-left 65px !important
 	/* FIN PORTAFOLIO */
+	/* INICIO SERVICIOS*/
+	.servicios-globales
+		width 1000px !important
+		.servicios-items
+			width 350px !important
+			float left !important
+			p 
+				font-size 14px !important
+			&.img-item
+				padding 0px !important
+				width 200px !important
+				margin-left 50px !important
+				margin-right 50px !important
+			&.derecho
+				p
+					text-align right !important
+				h2, 
+				i
+					float right !important
+	/* FIN SERVICIOS*/
+	/* INICIO CARACTERISTICAS */
+	.servicios-caracteristicas
+		width 535px !important
+		display table !important
+		padding-top 200px !important
+		.servicio-item
+			width 320px !important
+			float left
+			text-align right
+			background #fff
+			&.img-item
+			    padding 0px !important
+				width 200px !important
+				margin-left 50px !important
+				margin-right 50px !important
+			&.derecho,
+				p,
+				strong
+					text-align right !important
+				h2, 
+				i
+					float right !important
+				.img-portada,
+				.img-fondo
+					transform: rotate(-25deg)
+					//margin-right 20px !important
+					width 200px !important
+			&.izquierdo
+				p,
+				strong
+					text-align left !important
+				h2, 
+				i
+					float left !important
+				.img-portada,
+				.img-fondo
+					transform: rotate(25deg)
+					//margin-left 20px !important
+					width 200px !important
+					
+			&.texto
+				position relative
+				z-index 270000
+			//box-shadow 0px 0px 27px #000 !important
+	/* FIN CARACTERISTICAS */	
+	/* INICIO FORMULARIO CENTRADO*/
+	.form-center
+		display block
+		position relative
+		width 200px
+		margin 0px auto
+		input,
+		textarea
+			display block
+			width 100%
+			padding 10px
+			border none
+			border-left solid 1px #757575
+			border-right solid 1px #757575
+			border-bottom solid 1px #757575
+			outline none
+		button
+			display block
+			background #4179F7
+			position relative
+			font-size 16px
+			margin-top 20px
+			width 100%
+			border-radius 10px
+		.radi-top
+			border-radius 10px 10px 0px 0px
+			border-top solid 1px #757575
+		.radi-bottom
+			border-radius 0px 0px 10px 10px
+		textarea
+			height 150px
+		.espacio
+			display block
+			width 100%
+			height 20px
+			padding 5px
+	/* FIN FORMULARIO CENTRADO*/
 	/* INICIO FOOTER */
 	footer
 		.footer-body
